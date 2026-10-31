@@ -1,0 +1,3 @@
+#!/bin/sh
+# build.sh defaults JOBS to nproc, which macOS does not ship.
+exec sysctl -n hw.ncpu

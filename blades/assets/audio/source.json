@@ -1,0 +1,31 @@
+{
+  "url": "https://www.youtube.com/watch?v=5JPMeN1SkUE",
+  "clips": [
+    {
+      "name": "move",
+      "start_seconds": 25.98,
+      "duration_seconds": 0.22
+    },
+    {
+      "name": "blade",
+      "start_seconds": 24.66,
+      "duration_seconds": 0.34
+    },
+    {
+      "name": "select",
+      "start_seconds": 27.48,
+      "duration_seconds": 0.46
+    },
+    {
+      "name": "guide_open",
+      "start_seconds": 161.6,
+      "duration_seconds": 0.43
+    },
+    {
+      "name": "guide_close",
+      "start_seconds": 165.3,
+      "duration_seconds": 0.43
+    }
+  ],
+  "note": "Video-derived mono PCM cues. Isolation and exact onset still need listening verification; Back currently reuses move."
+}

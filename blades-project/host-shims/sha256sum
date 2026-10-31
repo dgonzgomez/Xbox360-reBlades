@@ -1,0 +1,22 @@
+#!/bin/bash
+# Darwin's /sbin/sha256sum accepts `sha256sum -c file` but not a checksum list on stdin.
+# tools/toolchain/build.sh checks downloads with: echo "$sha256  $archive" | sha256sum -c --quiet
+check=0
+args=()
+files=()
+for arg in "$@"; do
+	case "$arg" in
+	-c | --check) check=1; args+=("$arg") ;;
+	-*) args+=("$arg") ;;
+	*) files+=("$arg") ;;
+	esac
+done
+if [ "$check" -eq 1 ] && [ "${#files[@]}" -eq 0 ]; then
+	tmp=$(mktemp)
+	cat >"$tmp"
+	/sbin/sha256sum "${args[@]}" "$tmp"
+	status=$?
+	rm -f "$tmp"
+	exit "$status"
+fi
+exec /sbin/sha256sum "$@"

@@ -1,0 +1,14 @@
+{
+  "url": "https://www.youtube.com/watch?v=5JPMeN1SkUE",
+  "source_fps": 60,
+  "scale": "1920x1080 -> 1280x720, Lanczos",
+  "frames_seconds": {
+    "main": 528.0,
+    "empty": 162.0,
+    "signin": 164.0,
+    "exit": 530.0,
+    "profile-required": 153.0
+  },
+  "components": "Traced panel silhouettes, original shell/control artwork. Captured profile count, clock, and battery state are removed and replaced with live/explicitly offline state.",
+  "timing_status": "Opening/closing easing is provisional pending frame-by-frame measurement."
+}

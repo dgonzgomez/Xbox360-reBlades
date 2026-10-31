@@ -1,0 +1,10 @@
+#!/bin/bash
+# GCC 15's bundled zlib treats Apple's TARGET_OS_MAC as classic Mac OS and
+# defines fdopen() to NULL, which breaks the macOS SDK header. The SDK script
+# calls make immediately after unpack, so this wrapper applies that one-line
+# host fix and then runs the system make.
+zutil="${WORK:-$HOME/xsdk-gcc-work}/src/gcc-15.3.0/zlib/zutil.h"
+if [ -f "$zutil" ] && grep -q 'defined(MACOS) || defined(TARGET_OS_MAC)' "$zutil"; then
+	sed -i '' 's/defined(MACOS) || defined(TARGET_OS_MAC)/defined(MACOS)/' "$zutil"
+fi
+exec /usr/bin/make "$@"

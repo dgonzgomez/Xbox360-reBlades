@@ -1,0 +1,30 @@
+{
+  "url": "https://www.youtube.com/watch?v=5JPMeN1SkUE",
+  "title": "Xbox 360 Blades Dashboard Walkthrough",
+  "source_width": 1920,
+  "source_height": 1080,
+  "source_fps": 60,
+  "output_width": 1280,
+  "output_height": 720,
+  "resampling": "Lanczos",
+  "frames_seconds": {
+    "market_shell": 19.85,
+    "market_home": 20.5,
+    "live_shell": 24.616667,
+    "live_home": 18.6,
+    "games_shell": 24.833333,
+    "games_home": 26.7,
+    "media_shell": 138.55,
+    "media_home": 139.6,
+    "system_shell": 140.95,
+    "system_home": 141.3,
+    "games_library": 31.6,
+    "my_games": 36.5,
+    "console_settings": 143.3,
+    "display": 144.5,
+    "audio": 148.3,
+    "windows_media_center": 137.4
+  },
+  "canonical": true,
+  "note": "User selected this five-blade 16:9 video as the main reference. Earlier 4:3 frames and games tab.png remain historical references."
+}

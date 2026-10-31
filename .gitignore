@@ -1,0 +1,4 @@
+# Generated preview/XEX files and local reference-analysis scratch.
+blades/build/
+work/
+**/__pycache__/

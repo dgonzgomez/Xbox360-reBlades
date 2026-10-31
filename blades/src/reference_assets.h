@@ -1,0 +1,57 @@
+#ifndef BLADES_REFERENCE_ASSETS_H
+#define BLADES_REFERENCE_ASSETS_H
+enum {
+ REF_MARKET_BASE = 0,
+ REF_MARKET_SHELL = 1,
+ REF_MARKET_ICON0 = 2,
+ REF_MARKET_ICON1 = 3,
+ REF_MARKET_ICON2 = 4,
+ REF_LIVE_BASE = 5,
+ REF_LIVE_SHELL = 6,
+ REF_LIVE_ICON0 = 7,
+ REF_LIVE_ICON1 = 8,
+ REF_GAMES_BASE = 9,
+ REF_GAMES_SHELL = 10,
+ REF_GAMES_ICON0 = 11,
+ REF_GAMES_ICON1 = 12,
+ REF_MEDIA_BASE = 13,
+ REF_MEDIA_SHELL = 14,
+ REF_MEDIA_ICON0 = 15,
+ REF_MEDIA_ICON1 = 16,
+ REF_MEDIA_ICON2 = 17,
+ REF_MEDIA_ICON3 = 18,
+ REF_SYSTEM_BASE = 19,
+ REF_SYSTEM_SHELL = 20,
+ REF_SYSTEM_ICON0 = 21,
+ REF_SYSTEM_ICON1 = 22,
+ REF_SYSTEM_ICON2 = 23,
+ REF_SYSTEM_ICON3 = 24,
+ REF_SYSTEM_ICON4 = 25,
+ REF_SYSTEM_ICON5 = 26,
+ REF_SYSTEM_ICON6 = 27,
+ REF_GAMES_LIBRARY_BASE = 28,
+ REF_CONSOLE_SETTINGS_BASE = 29,
+ REF_MY_GAMES_BASE = 30,
+ REF_GAME_ICON0 = 31,
+ REF_GAME_ICON1 = 32,
+ REF_GAME_ICON2 = 33,
+ REF_GAME_ICON3 = 34,
+ REF_GAME_ICON4 = 35,
+ REF_GAME_ICON5 = 36,
+ REF_GAME_ICON6 = 37,
+ REF_GAME_ICON7 = 38,
+ REF_LIBRARY_BANNER = 39,
+ REF_LIBRARY_ROW0 = 40,
+ REF_LIBRARY_ROW1 = 41,
+ REF_LIBRARY_ROW2 = 42,
+ REF_LIBRARY_ROW3 = 43,
+ REF_LIBRARY_ROW4 = 44,
+ REF_ASSET_COUNT
+};
+typedef struct { int w,h; unsigned int size; const unsigned char *bytes; } ReferenceAsset;
+void reference_blit_scaled(int id,int x,int y,int w,int h);
+extern const ReferenceAsset reference_assets[REF_ASSET_COUNT];
+int reference_assets_init(void);
+void reference_blit(int id,int x,int y);
+void reference_rect(int id,int sx,int sy,int w,int h,int x,int y);
+#endif
